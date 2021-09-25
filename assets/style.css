@@ -50,3 +50,32 @@ body {
   main.container > * {
     max-width: 900px;
   }
+
+  button {
+    background-color: #04010a;
+    font-family: "Courier New", Courier, monospace;
+    color: papayawhip;
+    text-decoration: none;
+    border-radius: 8px;
+    border-color:blueviolet;
+    border-style: solid;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
+  button:hover, 
+  button:active {
+    border-style:dotted;
+  }
+
+  h2 {
+    color: cornsilk;
+  }

@@ -1,16 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     font-family: "Courier New", Courier, monospace;
     color: papayawhip;
     background-color: #04010a;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
     }
     
     /* style header to make it standout */
   header {
-    margin-top: 20px;
+    margin: 20px;
     padding: 40px;
-    text-align: center;
+    display: inline-block;
     color: rgb(0, 252, 34);
     }
     
@@ -18,16 +27,7 @@ body {
     font-size: 30px;
     }
 
-      /* blinking cursor to look like command prompt screen */
-  h1:after {
-    content: "";
-    width: 15px;
-    height: 20px;
-    background: rgb(0, 252, 34);
-    opacity: 0;
-    display: inline-block;
-    animation: blink 1s linear infinite alternate;
-  }
+
   
   @keyframes blink {
   50% {
@@ -37,19 +37,35 @@ body {
   opacity: 1;
     }
   }
-
-  main.container {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.container {
   
-  main.container > * {
-    max-width: 900px;
-  }
+  border-color: orangered;
+  border-style: double;
+width: 800px;
+max-width: 80%;
+border: 5px;
+padding: 10px;
+
+}
+
+.button-spot{
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  margin: 20px 0;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hide {
+  display: none;
+}
 
   button {
     background-color: #04010a;
@@ -65,9 +81,7 @@ body {
     max-width: 255px;
     padding: 20px 52px;
     text-align: center;
-    transition-duration: 0.15s;
-    transition-property: background-color;
-    transition-timing-function: linear;
+ 
     margin-top: 0.6em;
   }
 
@@ -82,13 +96,4 @@ body {
     color: cornsilk;
   }
 
-  .pop-quiz {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 200px;
-
-  }
+  

@@ -4,7 +4,7 @@ var startButton = document.querySelector(".start-button");
 
 function startGame() {
 
-    startButton.setAttribute("style", "hidden");
+    startButton.setAttribute("style", "none");
     startButton.disabled = true;
     //askQuestions()
     timer()
@@ -59,7 +59,7 @@ var questions = [
             d: "A method for choosing a value"
         },
         correctAnswer: "a"
-    },
+    }]
     /*{
         question: "Inside which HTML element do we put the JavaScript?",
         answers: {
@@ -109,9 +109,9 @@ var questions = [
             d: "Not at all"
         },
         correctAnswer: "a"
-    }*/
+    }
 
-];
+];*/
 console.log(questions)
 
 var popQuiz = document.querySelector("#pop-quiz"); 

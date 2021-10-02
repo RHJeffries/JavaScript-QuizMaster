@@ -3,72 +3,117 @@
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
-    color: papayawhip;
-    background-color: #04010a;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  font-family: "Courier New", Courier, monospace;
+  color: papayawhip;
+  background-color: #04010a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  margin-top: 20px;
+  padding: 40px;
+  text-align: center;
+  color: aqua;
+ flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  }
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.button {
+  padding: 14px 25px;
+  text-align: center;
+  color: papayawhip;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  border-color: chartreuse;
+  border-style: solid;
+
+}
+
+button {
+  padding: 14px 25px;
+  margin: 5px;
+  background-color: #04010a;
+  text-align: center;
+  color: papayawhip;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  border-color: chartreuse;
+  border-style: solid;
+
+}
+
+.button:hover, 
+.button:active {
+  border-style:dotted;
+  }
+
+button:hover, 
+button:active {
+  border-style:dotted;
+  }
+
+#quiz {display: inline-flex;
+    flex-direction: column;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    }
+}
 
-    main {
-      flex: 1 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 20px;
-      max-width: 800px;
-      margin: auto;
+#question {
+  display: flex;
+  flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#timer {
+  display: block;
+}
+
+h1 {
+  font-size: 60px;
   }
-    .container {
 
-      width: 600px;
-      max-width: 80%;
-      
-      
-      padding: 10px;
-    }
+#scoreContainer {
+  display: flex;
+  flex-direction: column;
+}
 
-    .button {
+#name {
+  background-color: #04010a;
+  border-radius: 8px;
+  border-color: chartreuse;
+  border-style: solid;
+  padding: 14px 25px;
+  margin: 5px;
+  color: papayawhip;
+}
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    button {
-
-      background-color: #04010a;
-      font-family: "Courier New", Courier, monospace;
-      color: papayawhip;
-      text-decoration: none;
-      border-radius: 8px;
-      border-color:blueviolet;
-      border-style: solid;
-      font-size: 2em;
-      letter-spacing: 0.21px;
-      line-height: 16px;
-      max-width: 255px;
-      padding: 20px 52px;
-      text-align: center;
-      margin-top: 5px;
-    
-    }
-
-    /*.start-button {
-
-
-    }*/
-
-
-
- 
 
   

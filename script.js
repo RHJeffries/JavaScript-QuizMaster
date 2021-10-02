@@ -5,7 +5,7 @@ var quiz = document.getElementById("quiz");
 var question = document.getElementById("question");
 var answer = document.getElementById("choices");
 var ans;
-
+var header = document.getElementById("header");
 
 var scoreDiv = document.getElementById("scoreContainer");
 
@@ -91,6 +91,7 @@ var questions = [{
 
 function startQuiz() {
     start.style.display = "none";
+    header.style.display = "none";
     showQuest();
     quiz.style.display = "inline-flex";
 
@@ -165,6 +166,7 @@ function timeOut() {
     clearInterval(timeRemain);
     document.getElementById("choices").innerHTML = "";
     quiz.style.display = "none";
+    timerEl.style.display = "none";
     scoreDiv.style.display = "inline-flex";
 
 

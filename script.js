@@ -198,25 +198,5 @@ if(player) {
 
 
 
-/*function showScores() {
-scoreSheet.innerHTML = "";
 
-for (var i = 0; i < leaderBoard.length; i++) {
-    var leadBoard = leaderBoard[i];
-
-    var li = document.createElement("li");
-    li.textContent = leadBoard;
-    li.setAttribute("data-index", i);
-
-    
-
-    
-    scoreSheet.appendChild(li);
-  }
-
-
-
-leaderBoard = JSON.parse(localStorage.getItem("score"));
-
-}*/
 

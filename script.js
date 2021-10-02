@@ -85,3 +85,28 @@ var questions = [{
         correct: "As long as a condition is true"
     }
 ];
+
+function startQuiz() {
+    start.style.display = "none";
+    renderQuestion();
+    quiz.style.display = "inline-flex";
+
+
+    timer();
+}
+
+function timer() {
+
+
+    var timeLeft = setInterval(function () {
+
+        if (timeRemain > 0) {
+            timerEl.textContent = timeRemain;
+            timeRemain--;
+        }
+        if (timeRemain === 0) {
+            clearInterval(timeLeft);
+            timeOut();
+        }
+    }, 1000);
+}

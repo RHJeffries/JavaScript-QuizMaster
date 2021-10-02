@@ -18,6 +18,7 @@ var timeRemain = 120;
 
 var saveBtn = document.querySelector("#submit");
 var nameInput = document.querySelector("#name");
+var scoreSheet = document.querySelector("#score-sheet");
 
 var questions = [{
         question: "What are variables used for in JavaScript Programs?",
@@ -169,18 +170,53 @@ function timeOut() {
 
 start.addEventListener("click", startQuiz);
 
-
+var leaderBoard = [];
 
 saveBtn.addEventListener("click", function(event){
 event.preventDefault();
 
-var player = {
-    name: nameInput.value.trim(),
-    score: score
+var player = nameInput.value.trim();
+
+if(player) {
+    var finalScore = {player: player, score: score };
+    nameInput.value = '';
+    leaderBoard = JSON.parse(localStorage.getItem("score")) || [];
+    leaderBoard.push(finalScore)
+    localStorage.setItem("score", JSON.stringify(leaderBoard));
+    for (var i = 0; i < leaderBoard.length; i++) {
+        var leadBoard = leaderBoard[i];
+    
+        var li = document.createElement("li");
+        li.textContent = leadBoard;
+        li.setAttribute("data-index", i);
+        scoreSheet.appendChild(li);
+      }
 }
 
-localStorage.setItem("player", JSON.stringify(player));
+
+});
 
 
-})
+
+/*function showScores() {
+scoreSheet.innerHTML = "";
+
+for (var i = 0; i < leaderBoard.length; i++) {
+    var leadBoard = leaderBoard[i];
+
+    var li = document.createElement("li");
+    li.textContent = leadBoard;
+    li.setAttribute("data-index", i);
+
+    
+
+    
+    scoreSheet.appendChild(li);
+  }
+
+
+
+leaderBoard = JSON.parse(localStorage.getItem("score"));
+
+}*/
 

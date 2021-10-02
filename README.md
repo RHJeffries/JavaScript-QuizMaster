@@ -5,7 +5,7 @@ A short and simple quiz to check over some basics key words around JavaScript. T
 
 ## Screenshots
 
-Start page of quiz ![Start page of quiz](./screenshots/start.jpg)
+Start page of quiz ![Start page of quiz](./screenshots/Start.jpg)
 
 One of the questions ![Quiz question](./screenshots/question.jpg)
 

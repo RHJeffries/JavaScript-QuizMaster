@@ -20,6 +20,10 @@ var saveBtn = document.querySelector("#submit");
 var nameInput = document.querySelector("#name");
 var scoreSheet = document.querySelector("#score-sheet");
 var scoreList = document.querySelector("#score-list");
+var leaderBoard = [];
+var restart = document.querySelector("#restart");
+var clearScores = document.querySelector("#clear");
+
 
 var questions = [{
         question: "What are variables used for in JavaScript Programs?",
@@ -88,7 +92,7 @@ var questions = [{
         correct: "As long as a condition is true"
     }
 ];
-
+ //starts quiz
 function startQuiz() {
     start.style.display = "none";
     header.style.display = "none";
@@ -99,6 +103,7 @@ function startQuiz() {
     timer();
 }
 
+//starts timer, until out of time or questions
 function timer() {
 
 
@@ -115,6 +120,7 @@ function timer() {
     }, 1000);
 }
 
+//produces questions
 function showQuest() {
     document.getElementById("choices").innerHTML = "";
     lastQuestion++;
@@ -140,28 +146,25 @@ function showQuest() {
     }
 }
 
+  // check answer choice if correct, adds score if correct, removes time if incorrect
 answer.addEventListener("click", function (event) {
 
 
-    // check answer choice if correct
+  
     if (answer === event.target.textContent) {
 
         score++;
-
-
 
     } else {
 
         
         timeRemain = timeRemain - 10;
-
-
-
     }
 
     showQuest()
 });
 
+//actions to take once game is finished
 function timeOut() {
     clearInterval(timeRemain);
     document.getElementById("choices").innerHTML = "";
@@ -174,8 +177,8 @@ function timeOut() {
 
 start.addEventListener("click", startQuiz);
 
-var leaderBoard = [];
 
+// end of game actions, saving name and showing core, collating leaderboard
 saveBtn.addEventListener("click", function(event){
 event.preventDefault();
 scoreDiv.style.display = "none";

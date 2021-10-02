@@ -88,7 +88,7 @@ var questions = [{
 
 function startQuiz() {
     start.style.display = "none";
-    renderQuestion();
+    showQuest();
     quiz.style.display = "inline-flex";
 
 
@@ -109,4 +109,28 @@ function timer() {
             timeOut();
         }
     }, 1000);
+}
+
+function showQuest() {
+    document.getElementById("choices").innerHTML = "";
+    lastQuestion++;
+    if (lastQuestion > 5) {
+        timeOut();
+    } else {
+
+
+        answer = questions[lastQuestion].correct;
+        question.textContent = questions[lastQuestion].question;
+        answer.innerText = "";
+
+
+        var ansChoices = questions[lastQuestion].choices;
+
+        for (var i = 0; i < ansChoices.length; i++) {
+            var nextChoice = document.createElement("button");
+
+            nextChoice.innerText = ansChoices[i]
+            document.getElementById("choices").appendChild(nextChoice);
+        }
+    }
 }

@@ -185,9 +185,12 @@ if(player) {
     localStorage.setItem("score", JSON.stringify(leaderBoard));
     for (var i = 0; i < leaderBoard.length; i++) {
         var leadBoard = leaderBoard[i];
-    
+        
+
+        console.log(leaderBoard)
+
         var li = document.createElement("li");
-        li.textContent = leadBoard;
+        li.textContent = leadBoard.player + ": " + leadBoard.score;
         li.setAttribute("data-index", i);
         scoreSheet.appendChild(li);
       }

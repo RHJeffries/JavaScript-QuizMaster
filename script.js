@@ -19,6 +19,7 @@ var timeRemain = 120;
 var saveBtn = document.querySelector("#submit");
 var nameInput = document.querySelector("#name");
 var scoreSheet = document.querySelector("#score-sheet");
+var scoreList = document.querySelector("#score-list");
 
 var questions = [{
         question: "What are variables used for in JavaScript Programs?",
@@ -174,6 +175,9 @@ var leaderBoard = [];
 
 saveBtn.addEventListener("click", function(event){
 event.preventDefault();
+scoreDiv.style.display = "none";
+scoreList.style.display = "inline";
+
 
 var player = nameInput.value.trim();
 

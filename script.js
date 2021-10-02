@@ -134,3 +134,27 @@ function showQuest() {
         }
     }
 }
+
+answer.addEventListener("click", function (event) {
+
+
+    // check answer choice if correct
+    if (answer === event.target.textContent) {
+
+        score++;
+
+
+
+    } else {
+
+        score--;
+        timeRemain = timeRemain - 10;
+
+
+
+    }
+
+    renderQuestion()
+});
+
+start.addEventListener("click", startQuiz);

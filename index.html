@@ -11,37 +11,31 @@
 
 <body>
 
-    <header>
-        <h1>
-            JavaScript Quiz!
-        </h1>
-    </header>
+<div id="start">Start</div>
 
-    
+<div id="quiz" style="display: none;">
+<div id="question"> </div>
+<div id="timer"></div>
+<ul id="choices">
+   <li class="answer-choice"> </li>
+   <li class="answer-choice"> </li>
+   <li class="answer-choice"> </li>
+   <li class="answer-choice"> </li>
+</ul>
 
-    <main class="container">
-
-<div>
-    <button class = "start-button" >Start the quiz</button>
-</div>
-
-<section>
-<!-- for questions answer choices on page,  questions and answers will be in js-->
-<div id="pop-quiz">
 
 </div>
-</section>
-
-
-<div>
-    <h2 id = "timer"></h2>
+<div id="scoreContainer" style="display: none;">
+<h1>Game Over</h1>
+<p>Well done on getting to the end! Enter your initials and see how you went</p>
+<form class="high-scores">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="player">
+    <button id="submit">Submit</button>
+</form>
 </div>
 
-  
-
-    </main>
-
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 
 </html>

@@ -14,86 +14,57 @@ body {
     width: 100vw;
     height: 100vh;
     }
+
+    .container {
+
+      width: 600px;
+      max-width: 80%;
+      
+      
+      padding: 10px;
+    }
+
+    .button {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    button {
+
+      background-color: #04010a;
+      font-family: "Courier New", Courier, monospace;
+      color: papayawhip;
+      text-decoration: none;
+      border-radius: 8px;
+      border-color:blueviolet;
+      border-style: solid;
+      font-size: 2em;
+      letter-spacing: 0.21px;
+      line-height: 16px;
+      max-width: 255px;
+      padding: 20px 52px;
+      text-align: center;
+      margin-top: 5px;
     
-    /* style header to make it standout */
-  header {
-    margin: 20px;
-    padding: 40px;
-    display: inline-block;
-    color: rgb(0, 252, 34);
-    }
-    
-  h1 {
-    font-size: 30px;
     }
 
+    /*.start-button {
 
-  
-  @keyframes blink {
-  50% {
-  opacity: 0;
+
+    }*/
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  100% {
-  opacity: 1;
+
+    .hide {
+      display: none;
     }
-  }
-.container {
-  
-  border-color: orangered;
-  border-style: double;
-width: 800px;
-max-width: 80%;
-border: 5px;
-padding: 10px;
-
-}
-
-.button-spot{
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  margin: 20px 0;
-}
-
-.controls{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.hide {
-  display: none;
-}
-
-  button {
-    background-color: #04010a;
-    font-family: "Courier New", Courier, monospace;
-    color: papayawhip;
-    text-decoration: none;
-    border-radius: 8px;
-    border-color:blueviolet;
-    border-style: solid;
-    font-size: 2em;
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
-    padding: 20px 52px;
-    text-align: center;
- 
-    margin-top: 0.6em;
-  }
-
-  button:hover, 
-  button:active {
-    border-style:dotted;
-    color: midnightblue;
-    background-color: lawngreen;
-  }
-
-  h2 {
-    color: cornsilk;
-  }
 
   

@@ -1,18 +1,31 @@
 var startButton = document.querySelector(".start-button");
+var questionSpot = document.getElementById("question-spot");
+//timer
+var timerEl = document.getElementById("timer");
+var questEl = document.getElementById("question");
+var ansButtons = document.getElementById("ans-buttons");
+
+var shuffledQuestion, currentQuestIndex;
+
+var score = 0;
 
 
 
 function startGame() {
+console.log("started");
 
-    startButton.setAttribute("style", "none");
-    startButton.disabled = true;
-    //askQuestions()
-    timer()
+startButton.classList.add("hide");
+shuffledQuestion = questions.sort(() => Math.random() - .5);
+currentQuestIndex = 0;
+questionSpot.classList.remove("hide");
+timer();
+nxtQuestion();
+
 }
 
 
-//timer
-var timerEl = document.getElementById("timer");
+
+
 
 
 
@@ -46,7 +59,7 @@ function timer() {
 
 
 // Quiz questions, each question an object
-var listEl = document.createElement("ul");
+
 
 
 var questions = [
@@ -59,8 +72,8 @@ var questions = [
             d: "A method for choosing a value"
         },
         correctAnswer: "a"
-    }]
-    /*{
+    },
+    {
         question: "Inside which HTML element do we put the JavaScript?",
         answers: {
             a: "<js>",
@@ -111,17 +124,11 @@ var questions = [
         correctAnswer: "a"
     }
 
-];*/
+];
 console.log(questions)
 
-var popQuiz = document.querySelector("#pop-quiz"); 
-var chooseQuestions = "";
-function askQuestions(){
-chooseQuestions = questions[Math.floor(Math.random() * questions.length)];
-popQuiz.textContent = chooseQuestions("");
-}
-console.log(chooseQuestions)
 
-//questions.textContent = "";
+
+
  // click start button to being quiz and start timer
 startButton.addEventListener("click", startGame);

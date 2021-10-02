@@ -1,7 +1,7 @@
 # JavaScript-QuizMaster
 
 ## Description
-A shot and simple quiz to check over some basics key words around JavaScript. The quiz is timed with time lost for incorrect answers. At the end the player enters their name and it goes on the leaderboard along with their score.
+A short and simple quiz to check over some basics key words around JavaScript. The quiz is timed with time lost for incorrect answers. At the end the player enters their name and it goes on the leaderboard along with their score.
 
 ## Screenshots
 

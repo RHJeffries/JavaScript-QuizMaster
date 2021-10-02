@@ -106,8 +106,8 @@ function timer() {
         if (timeRemain > 0) {
             timerEl.textContent = timeRemain;
             timeRemain--;
-        }
-        if (timeRemain === 0) {
+        };
+        if (timeRemain === 0 || lastQuestion > 5) {
             clearInterval(timeLeft);
             timeOut();
         }
@@ -118,6 +118,7 @@ function showQuest() {
     document.getElementById("choices").innerHTML = "";
     lastQuestion++;
     if (lastQuestion > 5) {
+        
         timeOut();
     } else {
 

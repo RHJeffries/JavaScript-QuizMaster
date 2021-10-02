@@ -11,8 +11,6 @@ var scoreDiv = document.getElementById("scoreContainer");
 
 var lastQuestion = -1;
 
-var count = 0;
-
 var score = 0;
 
 var timerEl = document.getElementById("timer");
@@ -150,7 +148,7 @@ answer.addEventListener("click", function (event) {
 
     } else {
 
-        score--;
+        
         timeRemain = timeRemain - 10;
 
 
@@ -171,15 +169,14 @@ function timeOut() {
 
 start.addEventListener("click", startQuiz);
 
-start.addEventListener("click", startQuiz);
-
 
 
 saveBtn.addEventListener("click", function(event){
 event.preventDefault();
 
 var player = {
-    name: nameInput.value.trim()
+    name: nameInput.value.trim(),
+    score: score
 }
 
 localStorage.setItem("player", JSON.stringify(player));

@@ -5,49 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz!</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
-   
+
 </head>
 
 <body>
+     <!-- Start button -->
+    <div id="start">Start</div>
+    <div id="timer"></div>
 
-<div id="start">Start</div>
+    <!-- Quiz questions will appear-->
+    <div id="quiz" style="display: none;">
+        <div id="question"> </div>
+        
+        <ul id="choices">
+            <li class="answer-choice"> </li>
+            <li class="answer-choice"> </li>
+            <li class="answer-choice"> </li>
+            <li class="answer-choice"> </li>
+        </ul>
+    </div>
 
-<div id="quiz" style="display: none;">
-<div id="question"> </div>
-<div id="timer"></div>
-<ul id="choices">
-   <li class="answer-choice"> </li>
-   <li class="answer-choice"> </li>
-   <li class="answer-choice"> </li>
-   <li class="answer-choice"> </li>
-</ul>
+    <!-- Show message for end of quiz and next steps, enter name -->
+    <div id="scoreContainer" style="display: none;">
+        <h1>Game Over</h1>
+        <p>Well done on getting to the end! Enter your name and see how you went</p>
+        <form class="high-scores">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="player">
+            <button id="submit">Save</button>
+        </form>
+    </div>
 
-
-</div>
-<div id="scoreContainer" style="display: none;">
-<h1>Game Over</h1>
-<p>Well done on getting to the end! Enter your name and see how you went</p>
-<form class="high-scores">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="player">
-    <button id="submit">Save</button>
-</form>
-
-
-
-
-</div>
-
-<section id="score-list"  style="display: none;">
-    <h2> Name : Score</h2>
-    <ul id="score-sheet">
-        <!--create scores in script-->
-    </ul>
-</section>
+    <!-- Show leaderboard of previous scores -->
+    <section id="score-list" style="display: none;">
+        <h2> Name : Score</h2>
+        <ul id="score-sheet">
+            <!--create scores in script-->
+        </ul>
+    </section>
 
 
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
